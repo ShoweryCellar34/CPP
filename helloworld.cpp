@@ -48,7 +48,7 @@ int main() {
         int x = (double) 3.14; 'x' will equal 3
         char x = 100; 'x' equals 'd' because the decimal representation of 'd' is 100 
         std::cout << (char) 100; will print 'd'
-    */
+        */
 
     // Interger (whole number)
     int test = 20;
