@@ -113,11 +113,11 @@ int main() {
     }
     return 0;
 
-    switch(number) {
-    case 1:
+    switch(number) { // 'number' is a interger that is used
+    case 1: // If 'number' is 1 then
         std::cout << "Number is 1!" << '\n';
         break;
-    case 10:
+    case 10: // If 'number' is 10 then
         std::cout << "Number is equal to 10!" << '\n';
         break;
     }
