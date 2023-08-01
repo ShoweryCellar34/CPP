@@ -118,6 +118,10 @@ int main() {
         std::cout << "Number is less than 10.\n";
     }
 
+    if(number >= 10 && number <= 20) { // If number is greater than or equal to 10 and less than or equal to 20
+        std::cout << "Number is between 10 and 20.\n";
+    }
+
     // gets number and "case1 expression" runs if number is equal to variable, if no matching case then run defalt case (not mandatory)
     switch(number) { // 'number' is a variable that is used
     case 1: // If 'number' is 1 then
