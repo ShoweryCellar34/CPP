@@ -20,11 +20,11 @@ int main() {
     //should only use when clear benefit
 
     //Math operators: + - * /
-    int varible;
-    varible += 1; // increment by one
-    varible -= 1; // decrement by one
-    varible *= 2; // multiply by one
-    varible /= 2; // divide by one
+    int variable;
+    variable += 1; // increment by one
+    variable -= 1; // decrement by one
+    variable *= 2; // multiply by one
+    variable /= 2; // divide by one
 
     //Order of calculation:
     //First: Parenthesis (Bedmas)
@@ -77,13 +77,13 @@ int main() {
     char n = 100; // 'n' equals 'd' because the decimal representation of 'd' is 100 
     std::cout << (char) 100; // will print 'd'
 
-    // Const make varible, works with int, double, char, bool, string
+    // Const make variable, works with int, double, char, bool, string
     const double PI = 3.14159265359;
     double radius = 10;
     double circumference = 2 * PI * radius;
     std::cout << circumference << '\n';
 
-    // "using namespace test" would assume test namespace is default and no need to use "test::..."
+    // "using namespace test" would assume test namespace is default and no need to use "test::expression1"
     int test = 20;
     std::cout << test << ' ' << example::test << '\n';
     test++; // "test = test + 1"
@@ -110,23 +110,23 @@ int main() {
     std::cin >> number;
 
     // Only ever one set of instructions in the following statment will ever run
-    if(number >= 10) { // If number is greater or equal to ... than then do ...
+    if(number >= 10) { // If number is greater or equal to variable than then do expression
         std::cout << "Number is greater than or equal to 10!\n";
-    } else if(number < 0) { // If nothing happend and number is less than ... than do ...
+    } else if(number < 0) { // If nothing happend and number is less than variable than do expression1
         std::cout << "Positive values only.\n";
-    } else { // If noting was triggered than do ...
+    } else { // If noting was triggered than do expression
         std::cout << "Number is less than 10.\n";
     }
 
-    // gets a varible and "case ..." segments runs if number is equal to ..., if no matching case then run defalt case (not mandatory)
-    switch(number) { // 'number' is a varible that is used
+    // gets number and "case1 expression" runs if number is equal to variable, if no matching case then run defalt case (not mandatory)
+    switch(number) { // 'number' is a variable that is used
     case 1: // If 'number' is 1 then
         std::cout << "Number is 1!\n";
         break;
     case 10: // If 'number' is 10 then
         std::cout << "Number is equal to 10!\n";
         break;
-    default: // If no matching case then do ...
+    default: // If no matching case then do default expression
         std::cout << "Number is not equal to 1 or 10.\n";
     }
 
@@ -154,7 +154,7 @@ int main() {
             std::cout << "You did not enter a A, a, B, b, C or c." << '\n';
     }
 
-    // If number is greater than or equal to 10 then ... else ...
+    // "If number is greater than or equal to 10 then expression1 else expression2" made shorter using the ternary operator
     number >= 10 ? std::cout << "Number is greater than or equal to 10!" << '\n' : std::cout << "Number is less than 10." << '\n';
     //Same as above
     std::cout << (number >= 10 ? "Number is greater than or equal to 10!\n" : "Number is less than 10.\n");
