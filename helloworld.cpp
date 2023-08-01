@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <cmath>
 
 // Createing a namespace
@@ -68,7 +69,7 @@ int main() {
     // '\n' is to start a new line
     std::cout << sum << '\n';
     std::cout << "Hello World!" << '\n';
-    std::cout << "Ok, I'm tired, go away world." << '\n';
+    std::cout << "Ok, I'm tired, go away world.\n";
 
     // Type conversion:
     double l = (int) 3.14; // 'l' will equal 3
@@ -97,12 +98,12 @@ int main() {
     int p = 8;
     double q = o / p * 100; // 'z' will be 0
     q = o / (double) p * 100; // 'z' will be 80
-    std::cout << q  << '%' << '\n';
+    std::cout << q  << '%\n';
 
     std::string name;
     std::cout << "What is your full name: ";
     std::getline(std::cin >> std::ws, name);
-    std::cout << "Hello, " << name << " how do you do" << '\n';
+    std::cout << "Hello, " << name << " have a good day\n";
 
     int number;
     std::cout << "Enter number: ";
@@ -110,23 +111,23 @@ int main() {
 
     // Only ever one set of instructions in the following statment will ever run
     if(number >= 10) { // If number is greater or equal to ... than then do ...
-        std::cout << "Number is greater than or equal to 10!" << '\n';
+        std::cout << "Number is greater than or equal to 10!\n";
     } else if(number < 0) { // If nothing happend and number is less than ... than do ...
-        std::cout << "Positive values only." << '\n';
+        std::cout << "Positive values only.\n";
     } else { // If noting was triggered than do ...
-        std::cout << "Number is less than 10." << '\n';
+        std::cout << "Number is less than 10.\n";
     }
 
     // gets a varible and "case ..." segments runs if number is equal to ..., if no matching case then run defalt case (not mandatory)
     switch(number) { // 'number' is a varible that is used
     case 1: // If 'number' is 1 then
-        std::cout << "Number is 1!" << '\n';
+        std::cout << "Number is 1!\n";
         break;
     case 10: // If 'number' is 10 then
-        std::cout << "Number is equal to 10!" << '\n';
+        std::cout << "Number is equal to 10!\n";
         break;
     default: // If no matching case then do ...
-        std::cout << "Number is not equal to 1 or 10." << '\n';
+        std::cout << "Number is not equal to 1 or 10.\n";
     }
 
     char character;
@@ -135,23 +136,28 @@ int main() {
 
     switch(character) { // Same as above but with letters and more cases
         case 'A':
-            std::cout << "You entered 'A'" << '\n';
+            std::cout << "You entered 'A'n";
             break;
         case 'a':
-            std::cout << "You entered 'a'" << '\n';
+            std::cout << "You entered 'a'\n";
             break;
         case 'B':
-            std::cout << "You entered 'B'" << '\n';
+            std::cout << "You entered 'B'\n";
             break;
         case 'b':
-            std::cout << "You entered 'b'" << '\n';
+            std::cout << "You entered 'b'\n";
             break;
         case 'C':
-            std::cout << "You entered 'c'" << '\n';
+            std::cout << "You entered 'c'\n";
             break;
         default:
             std::cout << "You did not enter a A, a, B, b, C or c." << '\n';
     }
+
+    // If number is greater than or equal to 10 then ... else ...
+    number >= 10 ? std::cout << "Number is greater than or equal to 10!" << '\n' : std::cout << "Number is less than 10." << '\n';
+    //Same as above
+    std::cout << (number >= 10 ? "Number is greater than or equal to 10!\n" : "Number is less than 10.\n");
 
     return 0;
 
