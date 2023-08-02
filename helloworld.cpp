@@ -1,3 +1,4 @@
+// Including dependencies
 #include <iostream>
 #include <string>
 #include <cmath>
@@ -75,7 +76,7 @@ int main() {
     double l = (int) 3.14; // 'l' will equal 3
     int m = (double) 3.14; // 'm' will equal 3
     char n = 100; // 'n' equals 'd' because the decimal representation of 'd' is 100 
-    std::cout << (char) 100; // will print 'd'
+    std::cout << (char) 100 << '\n'; // will print 'd'
 
     // Const make variable, works with int, double, char, bool, string
     const double PI = 3.14159265359;
@@ -96,9 +97,9 @@ int main() {
 
     int o = 10;
     int p = 8;
-    double q = o / p * 100; // 'z' will be 0
-    q = o / (double) p * 100; // 'z' will be 80
-    std::cout << q  << '%\n';
+    double q = p / o * 100; // 'z' will be 0
+    q = p / (double) o * 100; // 'z' will be 80
+    std::cout << q  << '%' << '\n';
 
     std::string name;
     std::cout << "What is your full name: ";
@@ -120,6 +121,26 @@ int main() {
 
     if(number >= 10 && number <= 20) { // If number is greater than or equal to 10 and less than or equal to 20
         std::cout << "Number is between 10 and 20.\n";
+    } else {
+        std::cout << "Number is not between 10 and 20.\n";
+    }
+    if(number <= 10 || number >= 20) { // The same as abover but using the "or" operator
+        std::cout << "Number is not between 10 and 20.\n";
+    } else {
+        std::cout << "Number is between 10 and 20.\n";
+    }
+
+    bool testBool = true;
+
+    if(testBool) { // Checking bool for true no need for "== true"
+        std::cout << "Bool is true.\n";
+    } else {
+        std::cout << "Bool is false.\n";
+    }
+    if(!testBool) { // Cecking bool for false use the not ('!') operator
+        std::cout << "Bool is false.\n";
+    } else {
+        std::cout << "Bool is true.\n";
     }
 
     // gets number and "case1 expression" runs if number is equal to variable, if no matching case then run defalt case (not mandatory)
@@ -163,6 +184,36 @@ int main() {
     //Same as above
     std::cout << (number >= 10 ? "Number is greater than or equal to 10!\n" : "Number is less than 10.\n");
 
+    std::string testString = "abcdefghijklmnopqrstuvwxyz";
+    std::cout << testString.length() << '\n'; // Returns the length of a string
+    std::cout << testString.empty() << '\n'; // Checks if a string is empty, returns a bool
+    std::cout << testString.append("string") << '\n'; // Appends a string to the end of another
+    std::cout << testString.at(0) << '\n'; // Returns the character at a given position (starting st 0)
+    testString.insert(0, "string"); // Inserts a character at the begining of a given position
+    std::cout << testString.find('a') << '\n'; // Returns the position of the first instance found of a character
+    testString.erase(0, 5); // Clears a selection from a starting point (0) and a ending point (5)
+    testString.clear(); // Clears the string
+
+    int testInt = 0;
+    while(testInt < 10) { // Will run an expression while a condition is met condition
+        std::cout << testInt << '\n';
+        testInt++;
+    }
+
+    testInt = 0;
+    do { // Does a expression then runs again if a condition is met
+        std::cout << testInt << '\n';
+        testInt++;
+    } while(testInt < 10);
+
+    for(int i = 0; i < 10; i++) { // Declare a varible then state a condition (like a while loop) finaly increment 'i' by one
+        std::cout << i << '\n';
+    }
+
+    // "break;" end loop
+    // "continue;" skip current loop iteration
+    // When nesting loops (putting them in each other) use different index names
+    
     return 0;
 
 }
