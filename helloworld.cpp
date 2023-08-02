@@ -2,13 +2,17 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <ctime>
 
 // Createing a namespace
 namespace example {
     int test = 21;
 }
 
-int main() {
+void speak(); // Pre-declare a function because the function was declared after where it was called
+void speakName(std::string name);
+
+int main() { // When declaring a function and returning data function name must be following the return data type
 
     // Comment
 
@@ -33,20 +37,20 @@ int main() {
     //Third: Addition and Subtraction
 
     //Max and Min:
-    double a = 3;
-    double b = 4;
-    double c;
+    int a = 3;
+    int b = 4;
+    int c;
     c = std::max(a, b); // returns the bigger number of the selection
     c = std::min(a, b); // returns the smaller number of the selection
-        
+
     //the rest need "#include <cmath>"
     //Power, Square root, absolute, rounding:
     double d = pow(2, 4); // returns '16'
     d = sqrt(9); // returns '3'
     d = abs(-4); // returns '4'
     d = round(3.14); // returns 3
-    d = ceil(3.14); // returns 4
-    d = floor(3.14); // returns 3
+    d = ceil(3.14); // returns 4 (rounds up)
+    d = floor(3.14); // returns 3 (rounds down)
 
     // Interger (whole number)
     int e = 20;
@@ -206,7 +210,7 @@ int main() {
         testInt++;
     } while(testInt < 10);
 
-    for(int i = 0; i < 10; i++) { // Declare a varible then state a condition (like a while loop) finaly increment 'i' by one
+    for(int i = 0; i < 10; i++) { // Declare a variable then state a condition (like a while loop) finaly increment 'i' by one
         std::cout << i << '\n';
     }
 
@@ -214,6 +218,24 @@ int main() {
     // "continue;" skip current loop iteration
     // When nesting loops (putting them in each other) use different index names
     
-    return 0;
+    srand(time(NULL)); // Set the pseudo-random number generator (RNG) seed to the current time
+    int random = rand(); // Make a pseudo-random number
+    random = (rand() % 20) + 1; // Pseudo-random number between 1 and 20
+
+    speak(); // Call the "speak" function
+    speakName("Test"); // Call the "speakName" function and pass a value to the "name" argument (seperate values with commas)
+
+    return 0; // Returns data (must match function return data type) to where it was called from (if a function returns a interger and you want to store that value do "int returnValue = function(arguments)") return '0' in main means everything went good
 
 }
+
+void speak() { // Declare a function (a piece of code that can be called again and again)
+    std::cout << "Hello!\n";
+}
+
+void speakName(std::string name) { // Declare a function but add a argument (variable) yhat can be used in the funtion (seperate arguments with commas)
+    std::cout << name << '\n';
+}
+
+// Functions can share the same name as long as the arguments are dirrerent
+// Local variables are variables that were declared inside a function, loop etcetera and can't be accessed outside that scope (local variables are priority), global varaibles are declared outside functions and can be accessed everywere (use the scope resolution operator "::" before variable name to choose global variable)
