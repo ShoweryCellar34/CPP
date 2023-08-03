@@ -230,7 +230,7 @@ int main() { // When declaring a function and returning data function name must 
     std::cout << testArray[0] << '\n'; // Prints the first item in the array
     testArray[0] = "1meti"; // Change the value of a array element
 
-    for(int i = 0; i < sizeof(testArray); i++) {
+    for(int i = 0; i < sizeof(testArray); i++) { // "sizeof" returns the size in bytes of the thing in parenthesis (strings return 32 bytes becaue they are a refrence)
         std::cout << testArray[i] << '\n';
     }
 
