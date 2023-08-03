@@ -230,9 +230,38 @@ int main() { // When declaring a function and returning data function name must 
     std::cout << testArray[0] << '\n'; // Prints the first item in the array
     testArray[0] = "1meti"; // Change the value of a array element
 
-    for(int i = 0; i < sizeof(testArray); i++) { // "sizeof" returns the size in bytes of the thing in parenthesis (strings return 32 bytes becaue they are a refrence)
+    for(int i = 0; i < sizeof(testArray) / sizeof(testArray[0]); i++) { // "sizeof" returns the size in bytes of the thing in parenthesis (strings return 32 bytes becaue they are a refrence)
         std::cout << testArray[i] << '\n';
     }
+
+    for(std::string item : testArray) { // For each loop (data type, item name, read from variable) does the same as above
+        std::cout << item << '\n';
+    }
+
+    int rows = 5;
+    int colums = 5;
+    int twoDimensionalArray[rows][colums] {{0, 0, 0, 0, 0}, // Create a 2D array
+                                            {0, 0, 0, 0, 0},
+                                            {0, 0, 0, 0, 0},
+                                            {0, 0, 0, 0, 0},
+                                            {0, 0, 0, 0, 0}};
+
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < colums; j++) {
+            std::cout << twoDimensionalArray[i][j] << " ";
+        }
+        std::cout << '\n';
+    }
+    std::cout << '\n';
+
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < colums; j++) {
+            twoDimensionalArray[i][j] = i + j;
+            std::cout << twoDimensionalArray[i][j] << " ";
+        }
+        std::cout << '\n';
+    }
+    std::cout << '\n';
 
     return 0; // Returns data (must match function return data type) to where it was called from (if a function returns a interger and you want to store that value do "int returnValue = function(arguments)") return '0' in main means everything went good
 
@@ -248,3 +277,5 @@ void speakName(std::string name) { // Declare a function but add a argument (var
 
 // Functions can share the same name as long as the arguments are dirrerent
 // Local variables are variables that were declared inside a function, loop etcetera and can't be accessed outside that scope (local variables are priority), global varaibles are declared outside functions and can be accessed everywere (use the scope resolution operator "::" before variable name to choose global variable)
+// When passing arrays it will become a pointer which means that "sizeof" will not work on it
+// "fill(beginingArrayIndex, endArrayIndex, valueToFillWith)"
