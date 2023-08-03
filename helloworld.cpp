@@ -225,6 +225,15 @@ int main() { // When declaring a function and returning data function name must 
     speak(); // Call the "speak" function
     speakName("Test"); // Call the "speakName" function and pass a value to the "name" argument (seperate values with commas)
 
+    std::string testArray[] = {"item1", "item2", "item3"};
+    std::cout << testArray << '\n'; // Will return the memory address for the array
+    std::cout << testArray[0] << '\n'; // Prints the first item in the array
+    testArray[0] = "1meti"; // Change the value of a array element
+
+    for(int i = 0; i < sizeof(testArray); i++) {
+        std::cout << testArray[i] << '\n';
+    }
+
     return 0; // Returns data (must match function return data type) to where it was called from (if a function returns a interger and you want to store that value do "int returnValue = function(arguments)") return '0' in main means everything went good
 
 }
