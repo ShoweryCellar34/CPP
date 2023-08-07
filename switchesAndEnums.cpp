@@ -1,5 +1,7 @@
 #include <iostream>
 
+enum test {test0, test1, test2, test3, test4, test5, test6, test7, test8, test9}; // Declare an enum 
+
 int main() {
 
     int number;
@@ -7,6 +9,7 @@ int main() {
     std::cin >> number;
 
     // gets number and "case1 expression" runs if number is equal to variable, if no matching case then run defalt case (not mandatory)
+    // Switches only work with intergers (characters have a interger value)
     switch(number) { // 'number' is a variable that is used
     case 1: // If 'number' is 1 then
         std::cout << "Number is 1!\n";
@@ -40,6 +43,26 @@ int main() {
             break;
         default:
             std::cout << "You did not enter a A, a, B, b, C or c." << '\n';
+    }
+
+    test testEnum = test0;
+
+    switch(testEnum) { // Enums have a interger value assinged to them (can be manualy set: "enum test {test0 = int, ...}")
+        case test0:
+            std::cout << "TEST0!!!" << '\n';
+            break;
+        case test1:
+            std::cout << "TEST1!!!" << '\n';
+            break;
+        case test2:
+            std::cout << "TEST2!!!" << '\n';
+            break;
+        case test3:
+            std::cout << "TEST3!!!" << '\n';
+            break;
+        case 4: // Can be accessed through there interger values
+            std::cout << "TEST4!!!" << '\n';
+            break;
     }
 
     return 0;
