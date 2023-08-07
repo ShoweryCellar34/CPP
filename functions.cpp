@@ -1,12 +1,7 @@
 #include <iostream>
 
-void speak() { // Declare a function (a piece of code that can be called again and again)
-    std::cout << "Hello!\n";
-}
-
-void speakName(std::string name) { // Declare a function but add a argument (variable) yhat can be used in the funtion (seperate arguments with commas) constants can be used in argument declareation
-    std::cout << name << '\n';
-}
+void speak(); // Because function is defined after main() we must predeclare the function (or define after main())
+void speakName(std::string name);
 
 int main() {
 
@@ -15,6 +10,14 @@ int main() {
 
     return 0;
 
+}
+
+void speak() { // Declare a function (a piece of code that can be called again and again)
+    std::cout << "Hello!\n";
+}
+
+void speakName(std::string name) { // Declare a function but add a argument (variable) yhat can be used in the funtion (seperate arguments with commas) constants can be used in argument declareation
+    std::cout << name << '\n';
 }
 
 // Functions can share the same name as long as the arguments are dirrerent, these are called overloaded functions
