@@ -6,7 +6,7 @@ int main() {
 
     std::string testString2 = "STRING"; // Make a string
 
-    std::string *pTestStrint2 = &testString2; // Create a pointer (they are variables that contain the memory address for another variable)
+    std::string *pTestStrint2 = &testString2; // Create a pointer (they are variables that contain the memory address for another variable), if not setting a pointer immediatly you should make it a null pointer by doing this "std::string *pointer = nullptr;" or "std::string *pointer = NULL;"
 
     std::cout << *pTestStrint2 << '\n'; // Outputs "STRING" not the memory address because we used the dereference oper ator '*' it is common to prefix a pointer with 'p'
 

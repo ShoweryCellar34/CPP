@@ -1,6 +1,6 @@
 #include <iostream>
 
-class human { // A struct with inbuilt functions
+class human { // Create a class (a struct with functions)
     private: // Attributes that are hidden from outside the class (private must go before public), methods in the class can read and write to private attributes these are getters and setters
         std::string password = "123abc";
     public: // Attributes (Defalts can be set)
@@ -40,11 +40,44 @@ class human { // A struct with inbuilt functions
     }
 
     human(std::string x, int y) { // This is a overloaded constructor
-    name = x; // Set the name
-    age = y; // Set the age
+    name = x;
+    age = y;
     }
 
     human() { // This empty constructor is here so not using a constructor and manualy entering values will work
+
+    }
+
+};
+
+class humanV2 : public human { // Create a class that inherits from the human class, that means that this class has all the attributes and methods of the human class
+    private:
+        bool isFlying = false;
+    public:
+
+    void toggleFly() {
+        if(isFlying) {
+            std::cout << name << " gracefully lands on the ground\n";
+        } else {
+            std::cout << name << " starts to fly!\n";
+        }
+    
+    isFlying = !isFlying;
+
+    }
+
+    humanV2(std::string x, int y, bool paysTaxes) { // Constructors are not inherited from the parent class
+        name = x;
+        age = y;
+        this -> paysTaxes = paysTaxes;
+    }
+
+    humanV2(std::string x, int y) {
+    name = x;
+    age = y;
+    }
+
+    humanV2() {
 
     }
 
@@ -72,6 +105,18 @@ int main() {
     human3.age = 28;
     // "human3.paysTaxes = true;" no need for this line because the default is "true"
     human3.stats();
+
+    humanV2 human4;
+    human4.name = "Subject no.4";
+    human4.age = 157;
+    human4.stats();
+    human4.toggleFly();
+    human4.toggleFly();
+
+    humanV2 human5("Subject no.5", 62, false);
+    human5.stats();
+    human5.toggleFly();
+    human5.toggleFly();
 
     return 0;
 
