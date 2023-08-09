@@ -47,7 +47,7 @@ int main() { // When declaring a function and returning data function name must 
     d = ceil(3.14); // returns 4 (rounds up)
     d = floor(3.14); // returns 3 (rounds down)
 
-    // Interger (whole number)
+    // integer (whole number)
     int e = 20;
     int f = 5;
     int sum = e + f;
@@ -105,7 +105,7 @@ int main() { // When declaring a function and returning data function name must 
     // "continue;" skip current loop iteration
     // When nesting loops (putting them in each other) use different index names
 
-    return 0; // Returns data (must match function return data type) to where it was called from (if a function returns a interger and you want to store that value do "int returnValue = function(arguments)") return '0' in main means everything went good
+    return 0; // Returns data (must match function return data type) to where it was called from (if a function returns a integer and you want to store that value do "int returnValue = function(arguments)") return '0' in main means everything went good
 
 }
 

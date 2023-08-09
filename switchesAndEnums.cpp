@@ -9,7 +9,7 @@ int main() {
     std::cin >> number;
 
     // gets number and "case1 expression" runs if number is equal to variable, if no matching case then run defalt case (not mandatory)
-    // Switches only work with intergers (characters have a interger value)
+    // Switches only work with integers (characters have a integer value)
     switch(number) { // 'number' is a variable that is used
     case 1: // If 'number' is 1 then
         std::cout << "Number is 1!\n";
@@ -47,7 +47,7 @@ int main() {
 
     test testEnum = test0;
 
-    switch(testEnum) { // Enums have a interger value assinged to them (can be manualy set: "enum test {test0 = int, ...}")
+    switch(testEnum) { // Enums have a integer value assinged to them (can be manualy set: "enum test {test0 = int, ...}")
         case test0:
             std::cout << "TEST0!!!" << '\n';
             break;
@@ -60,7 +60,7 @@ int main() {
         case test3:
             std::cout << "TEST3!!!" << '\n';
             break;
-        case 4: // Can be accessed through there interger values
+        case 4: // Can be accessed through there integer values
             std::cout << "TEST4!!!" << '\n';
             break;
     }

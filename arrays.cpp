@@ -2,7 +2,7 @@
 
 int main() {
 
-    std::string testArray[] = {"item1", "item2", "item3"}; // Create array (interger array example: "int intArray[] = {1, 2, 3}" when defining empty arrays array size must be set example: "int array[3]")
+    std::string testArray[] = {"item1", "item2", "item3"}; // Create array (integer array example: "int intArray[] = {1, 2, 3}" when defining empty arrays array size must be set example: "int array[3]")
     std::cout << testArray << '\n'; // Will return the memory address for the array
     std::cout << testArray[0] << '\n'; // Prints the first item in the array
     testArray[0] = "1meti"; // Change the value of a array element
