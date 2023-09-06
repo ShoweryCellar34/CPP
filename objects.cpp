@@ -1,52 +1,58 @@
 #include <iostream>
 
-class human { // Create a class (a struct with functions)
-    private: // Attributes that are hidden from outside the class (private must go before public), methods in the class can read and write to private attributes these are getters and setters
-        std::string password = "123abc";
+class human
+{        // A struct with functions
+private: // Everything in here can't be accssed through attribute access can hold attributes and methods (varibles and functions)
+    std::string password = "123abc";
+
+    void test()
+    {
+    }
+
     public: // Attributes (Defalts can be set)
         std::string name = "Subject no.0";
         int age = 18;
         bool paysTaxes = true;
 
-    void payTaxes(int amount) {
-        if(paysTaxes) {
-            std::cout << name << " payed $" << amount << " in taxes" << '\n';
-        } else {
-            std::cout << name << " did not pay $" << amount << " in taxes" << '\n';
-        }
-    }
-
-    // Methods (functions)
-    void stats() {
-        if(paysTaxes) {
-            if(age >= 18) {
-                std::cout << "My name is: " << name << ", I am " << age << " years old and I pay taxes\n";
+        void payTaxes(int amount) {
+            if(paysTaxes) {
+                std::cout << name << " payed $" << amount << " in taxes" << '\n';
             } else {
-                std::cout << "My name is: " << name << ", I am " << age << " years old and I pay taxes even though I am a child\n";
-            }
-        } else {
-            if(age >= 18) {
-                std::cout << "My name is: " << name << ", I am " << age << " years old and I do not pay taxes\n";
-            } else {
-                std::cout << "My name is: " << name << ", I am " << age << " years old and I do not pay taxes because I am a child\n";
+                std::cout << name << " did not pay $" << amount << " in taxes" << '\n';
             }
         }
-    }
 
-    human(std::string x, int y, bool paysTaxes) { // This is a constructor it is like a function (must have the same name as the class)
-        name = x; // Set the name
-        age = y; // Set the age
-        this -> paysTaxes = paysTaxes; // Because the class attribute has the same name a the constructor arguments we must use "this -> ..."
-    }
+        // Methods (functions)
+        void stats() {
+            if(paysTaxes) {
+                if(age >= 18) {
+                    std::cout << "My name is: " << name << ", I am " << age << " years old and I pay taxes\n";
+                } else {
+                    std::cout << "My name is: " << name << ", I am " << age << " years old and I pay taxes even though I am a child\n";
+                }
+            } else {
+                if(age >= 18) {
+                    std::cout << "My name is: " << name << ", I am " << age << " years old and I do not pay taxes\n";
+                } else {
+                    std::cout << "My name is: " << name << ", I am " << age << " years old and I do not pay taxes because I am a child\n";
+                }
+            }
+        }
 
-    human(std::string x, int y) { // This is a overloaded constructor
-    name = x;
-    age = y;
-    }
+        human(std::string x, int y, bool paysTaxes) { // This is a constructor it is like a function (must have the same name as the class)
+            name = x; // Set the name
+            age = y; // Set the age
+            this -> paysTaxes = paysTaxes; // Because the class attribute has the same name a the constructor arguments we must use "this -> ..."
+        }
 
-    human() { // This empty constructor is here so not using a constructor and manualy entering values will work
+        human(std::string x, int y) { // This is a overloaded constructor
+        name = x;
+        age = y;
+        }
 
-    }
+        human() { // This empty constructor is here so not using a constructor and manualy entering values will work
+
+        }
 
 };
 
