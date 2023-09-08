@@ -2,8 +2,9 @@
 
 int main() {
 
-    int rows = 5;
-    int colums = 5;
+    const int rows = 5;
+    const  int colums = 5;
+
     int twoDimensionalArray[rows][colums] {{0, 0, 0, 0, 0}, // Create a 2D array
                                             {0, 0, 0, 0, 0},
                                             {0, 0, 0, 0, 0},
