@@ -23,8 +23,8 @@ int main() { // When declaring a function and returning data function name must 
     int variable;
     variable += 1; // increment by one
     variable -= 1; // decrement by one
-    variable *= 2; // multiply by one
-    variable /= 2; // divide by one
+    variable *= 2; // multiply by two
+    variable /= 2; // divide by two
 
     //Order of calculation:
     //First: Parenthesis (Bedmas)
