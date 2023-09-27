@@ -94,7 +94,7 @@ int main() { // When declaring a function and returning data function name must 
 
     int number;
     std::cout << "Enter number: ";
-    std::cin >> number; // "std::cin" gets user input but whitespaces seperate enteries
+    std::cin >> number; // "std::cin" gets user input but whitespaces seperate entries
 
     std::string name;
     std::cout << "What is your full name: ";
