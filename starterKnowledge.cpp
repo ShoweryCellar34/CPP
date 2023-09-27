@@ -4,9 +4,6 @@
 #include <cmath>
 #include <ctime>
 
-void speak(); // Pre-declare a function because the function was declared after where it was called
-void speakName(std::string name);
-
 int main() { // When declaring a function and returning data function name must be following the return data type
 
     // Comment
