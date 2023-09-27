@@ -32,4 +32,5 @@
 *.app
 
 # User Settings
-#/.vscode
+/.vscode/*
+/.vscode/tasks.json
