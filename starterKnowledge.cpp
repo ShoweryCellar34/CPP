@@ -20,7 +20,7 @@ int main() { // When declaring a function and returning data function name must 
     //should only use when clear benefit
 
     //Math operators: + - * /
-    int variable;
+    int variable = 0; // Define and set "variable"
     variable += 1; // increment by one
     variable -= 1; // decrement by one
     variable *= 2; // multiply by two
