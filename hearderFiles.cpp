@@ -1,4 +1,4 @@
-#include "oLib.h"
+#include "oLib.hpp"
 
 int main()
 {
