@@ -88,8 +88,8 @@ int main() { // When declaring a function and returning data function name must 
 
     int o = 10;
     int p = 8;
-    double q = p / o * 100; // 'z' will be 0
-    q = p / (double) o * 100; // 'z' will be 80
+    double q = p / o * 100; // 'q' will be 0
+    q = p / (double) o * 100; // 'q' will be 80
     std::cout << q  << '%' << '\n';
 
     int number;
