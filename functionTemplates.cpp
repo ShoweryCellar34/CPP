@@ -3,7 +3,7 @@
 namespace test
 {
     template <typename T> // Define 'T'
-    T max(T x, T y)
+    T maxOne(T x, T y)
     { // Changes data type to anything BUT 'T' can only be one thing for each function call, can accept one data type, returns type 'T'
         return (x > y) ? x : y;
     }
@@ -24,8 +24,8 @@ namespace test
 int main()
 {
 
-    std::cout << test::max(1, 2) << '\n';        // Will return 2
-    std::cout << test::max(1.1, 2.2) << '\n';    // Will return 2.2
+    std::cout << test::maxOne(1, 2) << '\n';        // Will return 2
+    std::cout << test::maxOne(1.1, 2.2) << '\n';    // Will return 2.2
     std::cout << test::maxTwo(1, 2.2) << '\n';   // Will return 2
     std::cout << test::maxThree(1, 2.2) << '\n'; // Will return 2.2
 
