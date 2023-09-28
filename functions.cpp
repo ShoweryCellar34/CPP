@@ -1,6 +1,6 @@
 #include <iostream>
 
-void speak(); // Because function is defined after main() we must predeclare the function (or define before main())
+void speak(); // Because function is defined after main() we must declare the function and define later (or define before main())
 void speakName(std::string name);
 
 int main() {
@@ -12,11 +12,11 @@ int main() {
 
 }
 
-void speak() { // Declare a function (a piece of code that can be called again and again)
+void speak() { // Define a function (a piece of code that can be called again and again)
     std::cout << "Hello!\n";
 }
 
-void speakName(std::string name) { // Declare a function but add a argument (variable) yhat can be used in the funtion (seperate arguments with commas) constants can be used in argument declareation
+void speakName(std::string name) { // Define a function but add a argument (variable) yhat can be used in the funtion (seperate arguments with commas) constants can be used in argument declareation
     std::cout << name << '\n';
 }
 
