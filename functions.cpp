@@ -1,6 +1,6 @@
 #include <iostream>
 
-void speak(); // Because function is defined after main() we must predeclare the function (or define after main())
+void speak(); // Because function is defined after main() we must predeclare the function (or define before main())
 void speakName(std::string name);
 
 int main() {
