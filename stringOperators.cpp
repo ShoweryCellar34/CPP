@@ -16,3 +16,4 @@ int main() {
 }
 
 // "toupper(...)" convert to uppercase
+// "tolower(...)" convert to lowercase

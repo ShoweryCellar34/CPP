@@ -1,7 +1,7 @@
 #include <iostream>
 
 struct test { // Kinda like a custom data type
-    std::string string; // Values can be set here as to create defaults so no neec to explicitly set values
+    std::string string; // Values can be set here as to create defaults so no need to explicitly set values
     double number;
     bool toggle;
 };

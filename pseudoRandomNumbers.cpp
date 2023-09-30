@@ -6,7 +6,7 @@ int main() {
     int random = rand(); // Make a pseudo-random number
     std::cout << random << '\n';
     random = (rand() % 20) + 1; // Pseudo-random number between 1 and 20
-    std::cout << random << '\n';   
+    std::cout << random << '\n';
 
     return 0;
 
