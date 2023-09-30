@@ -33,7 +33,7 @@ int main() {
     } else {
         std::cout << "Bool is false.\n";
     }
-    if(!testBool) { // Cecking bool for false use the not ('!') operator
+    if(!testBool) { // Checking bool for false use the not ('!') operator
         std::cout << "Bool is false.\n";
     } else {
         std::cout << "Bool is true.\n";
