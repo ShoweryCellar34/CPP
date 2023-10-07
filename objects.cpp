@@ -2,12 +2,12 @@
 
 class human
 {        // A struct with functions
-private: // Everything in here can't be accssed through attribute access can hold attributes and methods (varibles and functions)
-    std::string password = "123abc";
+    private: // Everything in here can't be accessed through attribute access can hold attributes and methods (varibles and functions)
+        std::string password = "123abc";
 
-    void test()
-    {
-    }
+        void test()
+        {
+        }
 
     public: // Attributes (Defalts can be set)
         std::string name = "Subject no.0";
