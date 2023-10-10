@@ -1,15 +1,16 @@
 #include <iostream>
 
 class human
-{        // A struct with functions
-    private: // Everything in here can't be accessed through attribute access can hold attributes and methods (varibles and functions)
+{        // A class is a object that contains methods and attributes
+    private: // Everything in here can't be accessed through attribute access can only be accessed through methods in the class (Setting values here will make them default for any new instance created) and no need for this keyword because classes assume private by default
         std::string password = "123abc";
 
         void test()
         {
         }
 
-    public: // Attributes (Defalts can be set)
+    public: // Private is assumed by default so no need for private keyword but if you want somthing public do: "public:"
+        // Attributes (Setting values here will make them default for any new instance created)
         std::string name = "Subject no.0";
         int age = 18;
         bool paysTaxes = true;
@@ -86,6 +87,20 @@ class humanV2 : public human { // Create a class that inherits from the human cl
     humanV2() {
 
     }
+
+};
+
+struct test
+{ // A struct of structure is exactly the same as a class but it assumes public by default (a struct is used mostly for basic data storage and manipulation while classed are more commonly used for more complicated tasks, structs can inherit from classes)
+    std::string publicString = "this string is public";
+    void publicFunc()
+    {
+    }
+    private:
+        std::string testString = "test";
+        void privateFunc()
+        {
+        }
 
 };
 
